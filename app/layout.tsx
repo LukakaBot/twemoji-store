@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import './globals.css';
-import AppProvider from '@/components/base/AppProvider';
+import AppProvider from '@/components/layout/AppProvider';
+import AppHeader from '@/components/layout/AppHeader';
+import AppContent from '@/components/layout/AppContent';
+import AppFooter from '@/components/layout/AppFooter';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -32,7 +35,11 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<AppProvider>{children}</AppProvider>
+				<AppProvider>
+					<AppHeader />
+					<AppContent>{children}</AppContent>
+					<AppFooter />
+				</AppProvider>
 			</body>
 		</html>
 	);
