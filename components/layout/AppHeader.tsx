@@ -1,3 +1,5 @@
+import AppIcon from "@/components/base/AppIcon";
+
 function AppHeader() {
 	return 		<header className='border-b-border sticky top-0 z-30 border-b border-dashed'>
 			<div className='container-wrapper flex justify-between items-center gap-2'>
