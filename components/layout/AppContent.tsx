@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
-function AppContent({ children }: React.PropsWithChildren) {
-	return <main>{children}</main>;
+export default function AppContent({ children }: React.PropsWithChildren) {
+  return <main>{children}</main>;
 }
-
-export default AppContent;

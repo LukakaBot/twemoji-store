@@ -1,6 +1,6 @@
 import AppIcon from "@/components/base/AppIcon";
 
-function AppHeader() {
+export default function AppHeader() {
   return (
     <header className="border-b-border sticky top-0 z-30 border-b border-dashed">
       <div className="container-wrapper flex justify-between items-center gap-2 text-base font-semibold">
@@ -26,5 +26,3 @@ function AppHeader() {
     </header>
   );
 }
-
-export default AppHeader;

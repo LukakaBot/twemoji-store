@@ -8,7 +8,7 @@ export interface AppIconProps extends React.HTMLAttributes<HTMLElement> {
   color?: string;
 }
 
-function AppIcon(props: AppIconProps) {
+export default function AppIcon(props: AppIconProps) {
   const { className, name, size = 16, color } = props;
 
   const isLocalIcon = useMemo(
@@ -46,5 +46,3 @@ function AppIcon(props: AppIconProps) {
     />
   );
 }
-
-export default AppIcon;
