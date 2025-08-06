@@ -1,3 +1,11 @@
 export default function AppFooter() {
-  return <footer>我是底部</footer>;
+  return (
+    <footer className="border-t-border border-t border-dashed">
+      <div className="container-wrapper">
+        <span className="text-sm text-gray-500 opacity-75">
+          {new Date().getFullYear()} © Twemoji Store
+        </span>
+      </div>
+    </footer>
+  );
 }
