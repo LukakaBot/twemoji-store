@@ -1,12 +1,12 @@
-import AppIcon from '@/components/base/AppIcon'
+// import AppIcon from '@/components/base/AppIcon'
 
 export default function AppHeader() {
   return (
     <header className="border-b-border sticky top-0 z-30 border-b border-dashed">
       <div className="container-wrapper flex justify-between items-center gap-2 text-base font-semibold">
         <div className="flex-1 flex gap-2 items-center">
-          <AppIcon name="svg-partying-face" />
-          {/* <div>🥳</div> */}
+          {/* <AppIcon name="svg-partying-face" size={40} /> */}
+          <div className='rotate-y-180 text-4xl'>🥳</div>
           <p>Twemoji Store</p>
         </div>
         <div>
