@@ -1,4 +1,4 @@
-import AppIcon from "@/components/base/AppIcon";
+import AppIcon from '@/components/base/AppIcon'
 
 export default function AppHeader() {
   return (
@@ -11,7 +11,8 @@ export default function AppHeader() {
         </div>
         <div>
           <p>
-            Emojis by Twitter's{" "}
+            Emojis by Twitter's
+            {' '}
             <a
               className="text-[#ffcc4d] hover:border-solid hover:border-b-2 border-[#ffcc4d]"
               rel="noopener noreferrer"
@@ -24,5 +25,5 @@ export default function AppHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }

@@ -3,9 +3,11 @@ export default function AppFooter() {
     <footer className="border-t-border border-t border-dashed">
       <div className="container-wrapper">
         <span className="text-sm text-gray-500 opacity-75">
-          {new Date().getFullYear()} © Twemoji Store
+          {new Date().getFullYear()}
+          {' '}
+          © Twemoji Store
         </span>
       </div>
     </footer>
-  );
+  )
 }
