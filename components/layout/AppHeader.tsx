@@ -1,18 +1,17 @@
-// import AppIcon from '@/components/base/AppIcon'
+import AppIcon from "@/components/base/AppIcon";
 
 export default function AppHeader() {
   return (
-    <header className="border-b-border sticky top-0 z-30 border-b border-dashed">
+    <header className="border-b-border sticky top-0 z-30 border-b border-dashed bg-[#f6f4ee]">
       <div className="container-wrapper flex justify-between items-center gap-2 text-base font-semibold">
-        <div className="flex-1 flex gap-2 items-center">
-          {/* <AppIcon name="svg-partying-face" size={40} /> */}
-          <div className='rotate-y-180 text-4xl'>🥳</div>
+        <div className="flex-1 flex gap-4 items-center">
+          <AppIcon name="svg-partying-face" size={40} />
+          {/* <div className="rotate-y-180 text-4xl">🥳</div> */}
           <p>Twemoji Store</p>
         </div>
         <div>
           <p>
-            Emojis by Twitter's
-            {' '}
+            Emojis by Twitter's{" "}
             <a
               className="text-[#ffcc4d] hover:border-solid hover:border-b-2 border-[#ffcc4d]"
               rel="noopener noreferrer"
@@ -25,5 +24,5 @@ export default function AppHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
