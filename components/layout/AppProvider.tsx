@@ -1,7 +1,15 @@
-import { MantineProvider } from '@mantine/core'
-import React from 'react'
-import '@mantine/core/styles.css'
+import React from "react";
+import ThemeProvider from "../theme/ThemeProvider";
 
 export default function AppProvider({ children }: React.PropsWithChildren) {
-  return <MantineProvider>{children}</MantineProvider>
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+    </ThemeProvider>
+  );
 }
