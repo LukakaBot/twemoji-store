@@ -6,7 +6,7 @@ export default function Home() {
           {Array.from({ length: 20 }).map((item, index) => (
             <div
               key={index}
-              className="flex justify-center items-center p-4 rounded-2xl bg-[#f6f4ee] text-center cursor-pointer text-2xl hover:scale-105 transition-all duration-300  outline-2 outline-transparent hover:outline-[#ffcc4d]"
+              className="flex justify-center items-center p-4 rounded-2xl bg-[#F4F5F5] text-center cursor-pointer text-2xl hover:scale-105 transition-all duration-300  outline-2 outline-transparent hover:outline-[#ffcc4d]"
             >
               🥳
             </div>

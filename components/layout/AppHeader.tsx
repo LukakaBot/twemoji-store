@@ -2,7 +2,7 @@ import AppIcon from "@/components/base/AppIcon";
 
 export default function AppHeader() {
   return (
-    <header className="border-b-border sticky top-0 z-30 border-b border-dashed bg-[#f6f4ee]">
+    <header className="border-b-border sticky top-0 z-30 border-b border-dashed bg-[#F4F5F5]">
       <div className="container-wrapper flex justify-between items-center gap-2 text-base font-semibold">
         <div className="flex-1 flex gap-4 items-center">
           <AppIcon name="svg-partying-face" size={40} />
