@@ -1,38 +1,22 @@
 'use client'
 
 import type { Emoji } from 'emojibase'
+import type { AppSelectModalRef } from '@/components/base/AppSelectModal'
 import emojis from 'emojibase-data/zh/data.json'
 import Image from 'next/image'
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-} from '@/components/ui/drawer'
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
+import { useRef } from 'react'
+import AppSelectModal from '@/components/base/AppSelectModal'
+import { useConfigStore } from '@/store'
+
 import { getEmojiUrl } from '@/utils/tool'
 
-const skinTones = [
-  { ariaLabel: 'Toggle Default Skin Tone', value: 'default', bg: 'bg-[#ffcc22]' },
-  { ariaLabel: 'Toggle Light Skin Tone', value: '1f3fb', bg: 'bg-[#fae0c0]' },
-  { ariaLabel: 'Toggle Medium-Light Skin Tone', value: '1f3fc', bg: 'bg-[#e2c19d]' },
-  { ariaLabel: 'Toggle Medium Skin Tone', value: '1f3fd', bg: 'bg-[#c5946c]' },
-  { ariaLabel: 'Toggle Medium-Dark Skin Tone', value: '1f3fe', bg: 'bg-[#9f693f]' },
-  { ariaLabel: 'Toggle Dark Skin Tone', value: '1f3ff', bg: 'bg-[#5c473d]' },
-]
-
 export default function Home() {
-  const [open, setOpen] = useState(false)
-  const [selectEmoji, setSelectEmoji] = useState<Emoji>()
+  const { setSelectEmoji } = useConfigStore()
+  const selectModalRef = useRef<AppSelectModalRef>(null)
 
   const handleSelectEmoji = (emoji: Emoji) => {
     setSelectEmoji(emoji)
-    setOpen(true)
+    selectModalRef.current?.openModal()
   }
 
   return (
@@ -49,42 +33,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {selectEmoji && (
-          <Drawer open={open} onOpenChange={setOpen}>
-            <DrawerContent>
-              <DrawerHeader>
-                <Image className="mb-4" src={getEmojiUrl(selectEmoji)} width={90} height={90} alt={selectEmoji?.emoji} loading="lazy" />
-                <DrawerTitle className="text-left">{selectEmoji.label}</DrawerTitle>
-                <DrawerDescription className="text-left">
-                  [
-                  {selectEmoji?.tags && selectEmoji.tags?.map(tag => `#${tag}`).join(' ')}
-                  ]
-                </DrawerDescription>
-              </DrawerHeader>
-              <div className="px-4">
-                <div className="mt-4">
-                  <p className="my-1 text-sm">Skin tone</p>
-                  <div className="flex gap-2">
-                    <ToggleGroup variant="outline" type="single">
-                      {
-                        skinTones.map(skinTone => (
-                          <ToggleGroupItem value={skinTone.value} aria-label={skinTone.ariaLabel} key={skinTone.ariaLabel}>
-                            <div className={`w-3 h-3 rounded-full ${skinTone.bg}`} />
-                          </ToggleGroupItem>
-                        ))
-                      }
-                    </ToggleGroup>
-                  </div>
-                </div>
-                <DrawerFooter>
-                  <DrawerClose>
-                    <Button variant="outline">Cancel</Button>
-                  </DrawerClose>
-                </DrawerFooter>
-              </div>
-            </DrawerContent>
-          </Drawer>
-        )}
+        <AppSelectModal ref={selectModalRef} />
       </main>
     </div>
   )
