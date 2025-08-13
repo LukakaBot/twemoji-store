@@ -1,14 +1,14 @@
 'use client'
 
-import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
+import { useTheme } from 'next-themes'
+import AppIcon from '@/components/base/AppIcon'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import AppIcon from "@/components/base/AppIcon"
+} from '@/components/ui/dropdown-menu'
 
 export default function AppHeader() {
   const { setTheme } = useTheme()
@@ -22,17 +22,17 @@ export default function AppHeader() {
           <p>Twemoji Store</p>
         </div>
         <div className="flex items-center gap-4">
-          <p>
-            Emojis by Twitter's{" "}
+          <div>
+            <span>Emojis by Twitter's </span>
             <a
-              className="text-[#ffcc4d] hover:border-solid hover:border-b-2 border-[#ffcc4d]"
+              className="text-mustard-500 hover:border-solid hover:border-b-2 border-mustard-500"
               rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/twitter/twemoji"
             >
               Twemoji
             </a>
-          </p>
+          </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button className="cursor-pointer" variant="outline" size="icon">
@@ -42,13 +42,13 @@ export default function AppHeader() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
+              <DropdownMenuItem onClick={() => setTheme('light')}>
                 Light
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
+              <DropdownMenuItem onClick={() => setTheme('dark')}>
                 Dark
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>
+              <DropdownMenuItem onClick={() => setTheme('system')}>
                 System
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -56,5 +56,5 @@ export default function AppHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }
