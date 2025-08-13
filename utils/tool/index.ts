@@ -7,8 +7,8 @@ export function getEmojiUrl(emoji: Emoji, type: 'svg' | 'png' = 'svg', skinTone?
   let code = emoji.hexcode.toLowerCase()
 
   if (skinTone && emoji?.skins) {
-    const reg = new RegExp(`${skinTone}`, 'g')
-    code = emoji.skins.filter((skin) => skin.hexcode.search(reg))[0].hexcode
+    const reg = new RegExp(skinTone, 'i')
+    code = emoji.skins.filter(skin => skin.hexcode.search(reg) !== -1)[0].hexcode.toLowerCase()
   }
 
   if (type === 'png') {
