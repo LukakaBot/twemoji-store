@@ -1,5 +1,15 @@
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
-  --color-pearl: #F4F5F5;
+  --color-pearl: #f4f5f5;
   --color-eclipse: #2a2a2e;
+  --color-mustard-50: #fff8e6;
+  --color-mustard-100: #fff1cc;
+  --color-mustard-200: #ffe699;
+  --color-mustard-300: #ffd966;
+  --color-mustard-400: #ffcc4d;
+  --color-mustard-500: #ffcc4d;
+  --color-mustard-600: #e6b840;
+  --color-mustard-700: #cc9933;
+  --color-mustard-800: #997a26;
+  --color-mustard-900: #66521a;
 }
