@@ -2,26 +2,26 @@ export default function AppFooter() {
   return (
     <footer className="border-t-border border-t border-dashed bg-[var(--layout)]">
       <div className="container-wrapper">
-        <span className="text-sm text-[#888b92] dark:text-[#75777a] opacity-75">
-          built by{' '}
+        <div className="text-sm text-[#888b92] dark:text-[#75777a] opacity-75">
+          <span>built by </span>
           <a
-            className="text-[#ffcc4d] hover:border-solid hover:border-b-2 border-[#ffcc4d]"
+            className="text-mustard-500 hover:border-solid hover:border-b-2 border-mustard-500"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/"
           >
             lucas
           </a>
-          , powered by{' '}
+          <span>, powered by </span>
           <a
-            className="text-[#ffcc4d] hover:border-solid hover:border-b-2 border-[#ffcc4d]"
+            className="text-mustard-500 hover:border-solid hover:border-b-2 border-mustard-500"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/twitter/twemoji"
           >
             Twemoji
           </a>
-        </span>
+        </div>
       </div>
     </footer>
   )
