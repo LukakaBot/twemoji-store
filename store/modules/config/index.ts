@@ -9,15 +9,19 @@ interface ConfigState {
 interface ConfigAction {
   setSelectEmoji: (emoji: Emoji) => void
   setSkinTone: (skinTone: string) => void
+  clearSelectEmoji: () => void
+  clearSkinTone: () => void
 }
 
 type ConfigStore = ConfigState & ConfigAction
 
 const useConfigStore = create<ConfigStore>(set => ({
   selectEmoji: null,
-  skinTone: '',
+  skinTone: 'default',
   setSelectEmoji: emoji => set({ selectEmoji: emoji }),
   setSkinTone: skinTone => set({ skinTone }),
+  clearSelectEmoji: () => set({ selectEmoji: null }),
+  clearSkinTone: () => set({ skinTone: 'default' }),
 }))
 
 export default useConfigStore

@@ -7,7 +7,6 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import AppSelectModal from '@/components/base/AppSelectModal'
 import { useConfigStore } from '@/store'
-
 import { getEmojiUrl } from '@/utils/tool'
 
 export default function Home() {
