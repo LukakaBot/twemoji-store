@@ -133,9 +133,9 @@ export default function AppSelectModal(props: AppSelectModalProps) {
             </div>
           )}
           <div className="grid grid-cols-3 gap-2">
-            <Button className="font-bold bg-mustard-500 hover:bg-mustard-300 focus-visible:ring-0" variant="secondary" onClick={() => handleCopy(skinEmoji.emoji)}>{copyBtnText}</Button>
-            <Button className="font-bold bg-mustard-500 hover:bg-mustard-300" variant="secondary">svg</Button>
-            <Button className="font-bold bg-mustard-500 hover:bg-mustard-300" variant="secondary">png</Button>
+            <Button className="font-bold bg-mustard-500 hover:bg-mustard-300 cursor-pointer focus-visible:ring-0" variant="secondary" onClick={() => handleCopy(skinEmoji.emoji)}>{copyBtnText}</Button>
+            <Button className="font-bold bg-mustard-500 hover:bg-mustard-300 cursor-pointer" variant="secondary" onClick={() => window.open(getEmojiUrl(skinEmoji, 'svg'), '_blank')}>svg</Button>
+            <Button className="font-bold bg-mustard-500 hover:bg-mustard-300 cursor-pointer" variant="secondary" onClick={() => window.open(getEmojiUrl(skinEmoji, 'png'), '_blank')}>png</Button>
           </div>
         </DialogContent>
       </Dialog>
