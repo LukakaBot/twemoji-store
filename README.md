@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Introduction
+
+This is a Twemoji-based emoji browsing and selection application with skin tone switching and multiple format export support.
+
+For detailed documentation, please refer to:
+
+- [English README](./README.en-US.md)
+- [中文 README](./README.zh-CN.md)
+
+## License
+
+This project references [ShahriarKh/twemoji-cheatsheet](https://github.com/ShahriarKh/twemoji-cheatsheet). Twemoji graphics are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 ## Getting Started
 
 First, run the development server:
