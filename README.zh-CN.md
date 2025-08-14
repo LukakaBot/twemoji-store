@@ -13,7 +13,7 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Zustand](https://github.com/pmndrs/zustand) 5.0.7
 - [Tailwind CSS](https://tailwindcss.com/) v4
-- [Radix UI](https://www.radix-ui.com/)
+- [Shadcn](https://ui.shadcn.com/)
 - [Emojibase](https://emojibase.dev/)
 
 ## 功能特性
