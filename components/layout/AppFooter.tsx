@@ -17,7 +17,7 @@ export default function AppFooter() {
             className="text-mustard-500 hover:border-solid hover:border-b-2 border-mustard-500"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/twitter/twemoji"
+            href="https://twemoji.twitter.com/"
           >
             Twemoji
           </a>
