@@ -4,7 +4,7 @@
 
 ## 参考项目声明
 
-本项目部分功能和页面样式参考了 [ShahriarKh/twemoji-cheatsheet](https://github.com/ShahriarKh/twemoji-cheatsheet) 项目。Twemoji 图形资源采用 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可证 <sup>1</sup>。
+本项目借鉴了 [ShahriarKh/twemoji-cheatsheet](https://github.com/ShahriarKh/twemoji-cheatsheet) 项目。Twemoji 图形资源采用 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可证 <sup>1</sup>。
 
 ## 技术栈
 

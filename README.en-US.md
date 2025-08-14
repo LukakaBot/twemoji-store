@@ -4,7 +4,7 @@ A Twemoji-based emoji browsing and selection application with skin tone switchin
 
 ## Reference Project Statement
 
-This project references part of the functionality and page styles from [ShahriarKh/twemoji-cheatsheet](https://github.com/ShahriarKh/twemoji-cheatsheet). Twemoji graphics are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) <sup>1</sup>.
+This project draws inspiration from [ShahriarKh/twemoji-cheatsheet](https://github.com/ShahriarKh/twemoji-cheatsheet). Twemoji graphics are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) <sup>1</sup>.
 
 ## Tech Stack
 
